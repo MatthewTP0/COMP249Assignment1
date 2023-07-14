@@ -32,6 +32,10 @@ public class CertificateProgram extends Program{
     public String toString() {
         return super.toString().substring(0 , super.toString().length()-1) + ", capacity=" + capacity + "]" ;
     }
+    public Object copyObjectConstructor (Object obj){
+        CertificateProgram certificateProgram = new CertificateProgram((CertificateProgram) obj);
+        return certificateProgram;
+    }
 
     @Override
     public boolean equals(Object obj) {

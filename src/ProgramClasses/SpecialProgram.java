@@ -27,6 +27,10 @@ public class SpecialProgram extends Program{
     public String toString() {
         return super.toString().substring(0 , super.toString().length()-1) + ", duration=" + duration + "]" ;
     }
+    public Object copyObjectConstructor (Object obj){
+        SpecialProgram specialProgram = new SpecialProgram((SpecialProgram) obj);
+        return specialProgram;
+    }
     
     @Override
     public boolean equals(Object obj) {

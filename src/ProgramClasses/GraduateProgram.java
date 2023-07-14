@@ -26,6 +26,10 @@ public class GraduateProgram extends Program{
     public String toString() {
         return super.toString().substring(0 , super.toString().length()-1) + ", coordinator=" + coordinator + "]" ;
     }
+    public Object copyObjectConstructor (Object obj){
+        GraduateProgram graduateProgram = new GraduateProgram((GraduateProgram) obj);
+        return graduateProgram;
+    }
 
     @Override
     public boolean equals(Object obj) {

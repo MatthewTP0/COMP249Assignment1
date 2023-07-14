@@ -76,6 +76,10 @@ public class Program {
         this.totalCredits = programCopy.totalCredits;
         this.institution = programCopy.institution;
     }
+    public Object copyObjectConstructor (Object obj){
+        Program program = new Program((Program) obj);
+        return program;
+    }
     @Override
     public String toString() {
         return "Program [name=" + name + ", specialization=" + specialization + ", requiredCourses="

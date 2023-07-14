@@ -30,6 +30,12 @@ public class UndergraduateProgram extends Program{
         return super.toString().substring(0 , super.toString().length()-1) + ", accredited=" + accredited + "]" ;
     }
 
+
+    public Object copyObjectConstructor (Object obj){
+        UndergraduateProgram undergraduateProgram = new UndergraduateProgram((UndergraduateProgram) obj);
+        return undergraduateProgram;
+    }
+
     @Override
     public boolean equals(Object obj) {
         if (!super.equals(obj)) {
